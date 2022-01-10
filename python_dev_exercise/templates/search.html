@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}HomePage {% endblock %}
+{% block content %}
+<h1>Search Patient records </h1>
+<div class="col-md-4">    
+<form method="post">
+        <label for="title">Patient Name</label>
+        <br>
+        <input type="text" name="name"
+               placeholder="Patient first Name"
+               value="{{ request.form['name'] }}"></input>
+        <br>
+        <div class = "col mb-4">
+        <button type="submit">Submit</button>
+    </div>
+    </form>
+</div>   
+
+    
+
+<div class=page>
+{% for table in tables %}
+    
+    <h2>Search Results</h2>
+    
+    {{ table|safe }}
+  {% endfor %}
+{% endblock %}

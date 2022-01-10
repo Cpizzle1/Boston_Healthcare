@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}HomePage {% endblock %}
+
+{% block content %}
+<h1 class="text-center">Lab Results Finder</h1>
+Click  Search button in nav bar or this blue button --->
+<a href="{{ url_for('search') }}" type="button" class="btn btn-outline-primary">Search Page </a>
+    {% endblock %}
